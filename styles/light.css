@@ -1,0 +1,54 @@
+/*
+  Специально для светлой темы при наличии класса.
+  Здесь окажутся стили, которые нужно переопределить принудительно,
+  переключая тему
+*/
+
+:root.theme-light {
+  --accent-color: #ff0070;
+  --header_buttons-color: #353430;
+  --header_buttons_active-color: #353430;
+  --main-title-color: #ffc2e6;
+  --header_text-color: #353430;
+  --background-color: #FFF1F7;
+  --background-image: url(../images/cover-image-light.png);
+  --decorated-zone-color: #353430;
+  --text-color: #353430;
+  --text-link-color: #353430;
+  --text-link-shadow-color: #ff8dcb;
+  --title-decor-bg-color: #ff8dcb;
+  --header-buttons-hover-color: rgba(50, 49, 45, 0.4);
+}
+
+/* Остальные стили, только при необходимости */
+
+@media (prefers-color-scheme: light) {
+  :root {
+  --accent-color: #ff0070;
+  --header_buttons-color: #353430;
+  --header_buttons_active-color: #353430;
+  --main-title-color: #ffc2e6;
+  --header_text-color: #353430;
+  --background-color: #FFF1F7;
+  --background-image: url(../images/cover-image-light.png);
+  --decorated-zone-color: #353430;
+  --text-color: #353430;
+  --text-link-color: #353430;
+  --text-link-shadow-color: #ff8dcb;
+  --title-decor-bg-color: #ff8dcb;
+  --header-buttons-hover-color: rgba(50, 49, 45, 0.4);
+  }
+  :root.theme-light .rec {
+  display: none;
+  }
+
+  /* Остальные стили, только при необходимости */
+}
+
+:root.theme-light .rec {
+  display: none;
+}
+
+:root.theme-light .rec::after {
+  display: none;
+}

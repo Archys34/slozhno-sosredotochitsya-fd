@@ -1,0 +1,397 @@
+/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+/* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+
+.page {
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-color: var(--background-color);
+  background-attachment: fixed;
+}
+
+.header {
+  display: grid;
+  background-image: var(--background-image);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  grid-template-rows: 1fr min-content 1fr;
+  justify-items: end;
+  align-items: start;
+  height: 100vh;
+  min-height: 668px;
+  padding: 10px;
+  margin-block-end: 40px;
+}
+
+.header__theme-menu {
+  justify-self: end;
+  align-self: center;
+  margin: 0;
+}
+
+.header__theme-menu-item {
+  list-style: none;
+}
+
+.header__theme-menu-list {
+  display: grid;
+  gap: 12px;
+  align-items: start;
+  justify-self: end;
+  position: relative;
+}
+
+.header__theme-menu-button {
+  font-family: "IBM Plex mono";
+  font-style: normal;
+  font-size: 19px;
+  color: var(--header_buttons-color);
+  text-transform: lowercase;
+  background: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  line-height: 25px;
+  padding: 0px 12px;
+}
+
+.header__theme-menu-button:hover{
+  border-color: var(--header-buttons-hover-color);
+}
+
+.header__theme-menu-button:focus-visible {
+  border-color: transparent;
+  border-bottom-color: var(--header_buttons_active-color);
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid var(--header_buttons_active-color);
+  outline-offset: 0;
+  pointer-events: none;
+  border-color: var(--header_buttons_active-color);
+}
+
+
+.decorated-zone {
+  position: relative;
+}
+
+.decorated-zone::before {
+  content: "";
+  border: 1px solid var(--decorated-zone-color);
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 10px;
+  right: 10px;
+  border-left: none;
+  border-bottom: none;
+  padding: 0;
+}
+
+.decorated-zone::after {
+  content: "";
+  border: 1px solid var(--decorated-zone-color);
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  bottom: 10px;
+  left: 10px;
+  border-right: none;
+  border-top: none;
+}
+
+.main_title_decoration {
+  font-family: "IBM Plex mono";
+  font-style: normal;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  color: var(--main-title-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
+  line-height: 0.83;
+  justify-self: start;
+  align-self: center;
+  margin: 0;
+}
+
+.header_text {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--header_text-color);
+  align-self: center;
+  inline-size: min(100%, 355px);
+  justify-self: end;
+}
+
+.title-decor {
+  background-color: var(--title-decor-bg-color);
+}
+
+.text-basic_styles {
+  font-family: "IBM Plex mono";
+  font-size: 18px;
+  color: var(--header_text-color);
+  margin: 0 10px;
+}
+
+.chapter-section-title {
+  font-weight: bold;
+  font-size: 18px;
+  color: var(--header_buttons-color);
+}
+
+.section-title {
+  font-weight: bold;
+  font-size: 18px;
+  color: var(--header_text-color);
+  margin-block-end: 10px;
+  margin-block-start: 20px;
+}
+
+.section-subtitle {
+  font-size: 18px;
+  font-weight: normal;
+  margin-block-start: 20px;
+  margin-block-end: 10px;
+}
+
+.section-text {
+  color: var(--text-color);
+  line-height: 1.3;
+  font-size: 18px;
+}
+
+.card {
+  display: grid;
+}
+
+.cards_block {
+  margin-block-end: 50px;
+}
+
+.special_title_style {
+  margin-block-end: 10px;
+  margin-block-start: 8px;
+}
+
+.text_accent {
+  color: var(--text-link-color);
+  text-decoration: none;
+  text-shadow: 2px 1px var(--text-link-shadow-color);
+}
+
+.text_accent:hover {
+  border-bottom: 1px solid var(--text-link-color);
+}
+
+.text_accent:focus {
+  border: 1px solid var(--text-link-color);
+}
+
+.gallery {
+  display: grid;
+  gap: 10px;
+  margin-block-end: 50px;
+}
+
+.gallery img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.footer {
+  display: grid;
+  height: 100vh;
+  min-height: 668px;
+  align-items: center;
+  bottom: 11px;
+  background-image: none;
+  background: var(--background-color);
+}
+
+/*подгонка футера*/
+.footer .main_title_decoration {
+  justify-self: center;
+  align-self: center;
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+/* МЕДИАЗАПРОСЫ для адаптива под разные экраны */
+
+/* правила 768 */
+@media screen and (min-width: 768px) {
+  .header {
+    padding: 0;
+  }
+
+  .text-basic_styles {
+    padding-left: 10px;
+  }
+
+  .decorated-zone::before {
+    top: 20px;
+    right: 21px;
+  }
+
+  .decorated-zone::after {
+    bottom: 20px;
+    left: 20px;
+  }
+
+  .header__theme-menu {
+    margin-block-start: 18px;
+    padding-right: 21px;
+  }
+
+  .header_text {
+    justify-self: end;
+    inline-size: 364px;
+    margin-inline-end: 20px;
+    margin-block-end: 20px;
+  }
+
+  .cards_block {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 20px;
+    padding-right: 11px;
+    align-items: start;
+    margin-block-end: 59px;
+  }
+
+  .block_reasons {
+    display: block;
+  }
+
+  .chapter-section-title {
+    grid-column: 1;
+    padding-top: 20px;
+  }
+
+  .card {
+    grid-column-start: 2;
+  }
+
+  .cards_block--advice {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 20px;
+    align-items: start;
+    margin-block-end: 81px;
+  }
+
+  .cards_block--two-col {
+    grid-column: 1/3;
+  }
+
+  .cards_block--advice {
+    grid-column: 1;
+  }
+
+  .grid_adjustment {
+    grid-column: 2;
+  }
+
+  .advice-list {
+    grid-column: 2;
+  }
+
+  .gallery_title {
+    padding-right: 11px;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "sunset sunset ice"
+      "tape books ice"
+      "tape street street";
+    gap: 20px;
+    margin-block-end: 72px;
+    padding-right: 11px;
+    padding-top: 11px;
+  }
+
+  .sunset {
+    grid-area: sunset;
+  }
+
+  .ice {
+    grid-area: ice;
+  }
+
+  .tape {
+    grid-area: tape;
+  }
+
+  .books {
+    grid-area: books;
+  }
+
+  .street {
+    grid-area: street;
+  }
+
+  .gallery img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* правила 1024 */
+@media screen and (min-width: 1024px) {
+  .header {
+    height: 100vh;
+    min-height: 768px;
+    padding: 0;
+    margin-block-end: 40px;
+  }
+
+  .header_text {
+    inline-size: 491px;
+    margin-inline-end: 20px;
+  }
+
+  .header__theme-menu {
+    justify-self: center;
+    align-self: start;
+    margin-block-start: 17px;
+    padding-right: 1px;
+  }
+
+  .header__theme-menu-list {
+    grid-auto-flow: column;
+    column-gap: 8px;
+  }
+
+  .main_title_decoration {
+    font-size: 157px;
+    justify-self: start;
+    align-self: center;
+  }
+
+  .cards_block {
+    column-gap: 11px;
+  }
+
+  .cards_block--two-col {
+    grid-column: auto;
+    grid-row-start: 2;
+  }
+
+  .chapter-section-title {
+    grid-column: auto;
+    grid-row: 1;
+    padding-top: 20px;
+  }
+
+  .block_reasons {
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+  }
+}
