@@ -3,33 +3,22 @@
   здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-
+:root.theme-dark{
+  --accent-color: #ff0070;
+  --header_buttons-color: #ff0070;
+  --header_buttons_active-color: #ff0070;
+  --main-title-color: #db00ff;
+  --header_text-color: #000028;
+  --background-color: #000028;
+  --background-image: url(../images/cover-image-dark.png);
+  --decorated-zone-color: #ff0070;
+  --text-color: #f1b2ce;
+  --text-link-color: #f1b2ce;
+  --text-link-shadow-color: #ff0070;
+  --title-decor-bg-color: #ff0070;
+  --header-buttons-hover-color: rgba(255, 0, 112, 0.4);
+}
+/*принудительное включение для кнопки “Неон”*/
 :root.theme-dark .rec {
   display: block;
-  position: absolute;
-  font-family: "IBM Plex mono";
-  font-style: normal;
-  font-size: 18px;
-  margin-block-start: 10px;
-  margin-inline-end: 38px;
-  color: #ff0070;
-}
-
-:root.theme-dark .rec::after {
-  content: "";
-  position: absolute;
-  margin-block-start: 7px;
-  margin-inline-start: 10px;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #ff0070;
-  box-shadow: 0 0 4px 2px #ff0070;
-}
-
-@media screen and (min-width: 768px) {
-  :root.theme-dark .rec {
-    margin-block-start: 20px;
-    margin-inline-end: 49px;
-  }
 }

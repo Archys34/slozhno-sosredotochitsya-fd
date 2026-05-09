@@ -19,6 +19,24 @@
   --header-buttons-hover-color:rgba(255, 0, 112, 0.4);
 }
 
+/*при нажатии на кнопку Неон, скрипт добавляет класс "theme-dark" в html, вот переменные для theme-dark*/
+:root.theme-dark {
+   --accent-color: #ff0070;
+  --header_buttons-color: #ff0070;
+  --header_buttons_active-color: #ff0070;
+  --main-title-color: #db00ff;
+  --header_text-color: #000028;
+  --background-color: #000028;
+  --background-image: url(../images/cover-image-dark.png);
+  --decorated-zone-color: #ff0070;
+  --text-color: #f1b2ce;
+  --text-link-color: #f1b2ce;
+  --text-link-shadow-color: #ff0070;
+  --title-decor-bg-color: #ff0070;
+  --header-buttons-hover-color:rgba(255, 0, 112, 0.4);
+}
+
+
 :root.theme-light {
   --accent-color: #ff0070;
   --header_buttons-color: #353430;

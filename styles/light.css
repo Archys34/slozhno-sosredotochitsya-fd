@@ -20,6 +20,11 @@
   --header-buttons-hover-color: rgba(50, 49, 45, 0.4);
 }
 
+:root.theme-light .rec {
+  display: none;
+}
+
+
 /* Остальные стили, только при необходимости */
 
 @media (prefers-color-scheme: light) {
@@ -37,18 +42,12 @@
   --text-link-shadow-color: #ff8dcb;
   --title-decor-bg-color: #ff8dcb;
   --header-buttons-hover-color: rgba(50, 49, 45, 0.4);
-  }
-  :root.theme-light .rec {
-  display: none;
-  }
+}
+ 
+.rec {
+display: none;
+}
 
   /* Остальные стили, только при необходимости */
 }
 
-:root.theme-light .rec {
-  display: none;
-}
-
-:root.theme-light .rec::after {
-  display: none;
-}
