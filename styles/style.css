@@ -58,6 +58,7 @@
 }
 
 .header__theme-menu-button:focus-visible {
+  outline: none;
   border-color: transparent;
   border-bottom-color: var(--header_buttons_active-color);
 }
@@ -189,6 +190,18 @@
   display: grid;
 }
 
+.advice-item {
+  display: grid;
+}
+
+.advice-content {
+  display: grid;
+}
+
+.advice-list {
+  display: grid;
+}
+
 .cards_block {
   margin-block-end: 50px;
 }
@@ -209,6 +222,10 @@
 }
 
 .text_accent:focus {
+  outline: none;
+}
+
+.text_accent:focus-visible {
   border: 1px solid var(--text-link-color);
 }
 
@@ -280,7 +297,7 @@
     column-gap: 20px;
     padding-right: 11px;
     align-items: start;
-    margin-block-end: 59px;
+    margin-block-end: 60px;
   }
 
   .block_reasons {
@@ -288,8 +305,11 @@
   }
 
   .chapter-section-title {
+    max-width: 768px;
     grid-column: 1;
     padding-top: 20px;
+    max-inline-size: 236px;
+
   }
 
   .card {
@@ -305,15 +325,11 @@
     grid-column: 1;
   }
 
-  .cards_block--two-col {
+  .cards_block--layout_wide {
     grid-column: 1/3;
   }
 
-  .grid_adjustment {
-    grid-column: 2;
-  }
-
-  .advice-list {
+  .advice-content {
     grid-column: 2;
   }
 
@@ -359,8 +375,6 @@
     height: 100%;
   }
 
-  /*перенесено из dark.css*/
-
  .rec {
     margin-block-start: 20px;
     margin-inline-end: 49px;
@@ -372,15 +386,16 @@
 /* правила 1024 */
 @media screen and (min-width: 1024px) {
   .header {
-    height: 100vh;
     min-height: 768px;
-    padding: 0;
-    margin-block-end: 40px;
+    margin-block-end: 60px;
+  }
+
+  .cards_block--layout_wide {
+    grid-column:auto;
   }
 
   .header_text {
     max-width: 491px;
-    width: 100%;
     margin-inline-end: 20px;
   }
 
@@ -403,24 +418,44 @@
   }
 
   .cards_block {
+    display: grid;
     column-gap: 11px;
+    row-gap: 20px;
+
   }
 
-  .cards_block--two-col {
+  .cards_block--layout_wide {
     grid-column: auto;
     grid-row-start: 2;
   }
 
   .chapter-section-title {
-    grid-column: auto;
-    grid-row: 1;
-    padding-top: 20px;
+    max-width: 315px;
   }
 
   .block_reasons {
     display: grid;
-    grid-template-rows: min-content 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .reason-list {
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 20px;
+    column-gap: 21px;
+    align-items: start;
+  }
+
+  .section-title{
+    margin-block-end: 10px;
+    margin-block-start: auto;
+    height: fit-content;
+  }
+
+  .chapter-section-title {
+    padding-top: 0px;
+  }
+
+  .cards_block {
+  margin-block-end: 80px;
   }
 }
